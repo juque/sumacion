@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,40 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.addition-container {
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea los números a la derecha */
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  padding-bottom: 100px;
+}
+
+.inner-container {
+  width: 190px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.sum-row {
+  justify-content: space-between; /* Separa el + de los números */
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.operator {
+  margin-right: auto; /* Empuja el + a la izquierda */
+}
+
+.wrap-container {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
 }
