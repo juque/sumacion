@@ -1,14 +1,5 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Item from './components/Item';
 import './App.css'
-
-const Item = ({id, name}) => {
-  return (
-    <div>
-        <strong>ID:</strong> {id} <strong>name:</strong> { name }
-    </div>
-  )
-}
 
 function App() {
 
