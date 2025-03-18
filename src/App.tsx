@@ -6,10 +6,22 @@ function generateRandomNumber() {
   return Math.floor(number);
 }
 
-function generateSumandos() {
-  const sumando1 = generateRandomNumber();
-  const sumando2 = Math.floor(Math.random() * sumando1) + 1;
-  return {id: crypto.randomUUID(), sumando1, sumando2 }
+function generateSumandos(intervalo = { min: 1, max: 17 }, diferenciaMinima = 7) {
+
+    let value1, value2;
+
+    do {
+        // Generar value1 dentro del intervalo
+        value1 = Math.floor(Math.random() * (intervalo.max - intervalo.min)) + intervalo.min;
+
+        // Generar value2 dentro del intervalo, asegurando que sea mayor que value1
+        value2 = Math.floor(Math.random() * (intervalo.max - value1)) + value1 + 1;
+
+    } while (value2 - value1 < diferenciaMinima); // Asegurar que la diferencia sea al menos la mínima especificada
+
+    return {id: crypto.randomUUID(), sumando1: value2, sumando2: value1 };
+
+
 }
 
 
@@ -31,7 +43,7 @@ function App() {
 
   return (
     <>
-      <h1>Sumas</h1>
+      <h1>Sumación</h1>
       <div className="wrap-container">
         { itemsRenderizados }
       </div>
