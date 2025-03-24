@@ -6,7 +6,7 @@ function generateRandomNumber() {
   return Math.floor(number);
 }
 
-function generateSumandos(intervalo = { min: 1, max: 17 }, diferenciaMinima = 7) {
+function generateSumandos(intervalo = { min: 1, max: 23 }, diferenciaMinima = 7) {
 
     let value1, value2;
 
