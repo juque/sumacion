@@ -1,4 +1,5 @@
 import Item from './components/Item';
+import IncompleteSum from './components/IncompleteSum';
 import './App.css'
 
 function generateRandomNumber() {
@@ -31,7 +32,7 @@ function App() {
 
   const itemsRenderizados = [];
 
-  for( let i = 0; i < 9; i++) {
+  for( let i = 0; i < 6; i++) {
       const randomSum = generateSumandos();
       datos.push(randomSum);
   }
@@ -43,10 +44,11 @@ function App() {
 
   return (
     <>
-      <h1>Sumación</h1>
+      <h1 className="mb-10">Sumación</h1>
       <div className="wrap-container">
         { itemsRenderizados }
       </div>
+      <IncompleteSum />
     </>
   )
 }

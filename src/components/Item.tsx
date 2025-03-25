@@ -13,6 +13,7 @@ const Item = ({sumando1, sumando2}) => {
 					<div className="operator">+</div>
 					<div className="number bottom-number">{sumando2}</div>
 				</div>
+        <div className="border border-dashed rounded-md h-15 mt-3"></div>
         </div>
 			</div>
 
